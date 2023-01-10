@@ -1,4 +1,4 @@
-package me.dingko.designpatterns._01_creational_patterns._02_factorymethod._01_before;
+package me.dingko.designpatterns._01_creational_patterns._02_factorymethod._02_after;
 
 public class Ship {
 
