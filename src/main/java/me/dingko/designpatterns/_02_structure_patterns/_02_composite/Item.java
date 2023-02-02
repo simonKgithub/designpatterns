@@ -1,6 +1,6 @@
 package me.dingko.designpatterns._02_structure_patterns._02_composite;
 
-public class Item {
+public class Item implements Component{
     private String name;
     private int price;
 
@@ -9,6 +9,7 @@ public class Item {
         this.price = price;
     }
 
+    @Override
     public int getPrice() {
         return this.price;
     }
