@@ -7,6 +7,7 @@ public class App {
         TourPlan shortTrip = new TourPlan();
         shortTrip.setTitle("오레곤 롱비치 여행");
         shortTrip.setStartDate(LocalDate.of(2021, 7, 15));
+        System.out.println(shortTrip.toString());
 
 
         TourPlan tourPlan = new TourPlan();
@@ -24,5 +25,7 @@ public class App {
         tourPlan.addPlan(1, "저녁은 BBQ 식당에서 스테이크");
         tourPlan.addPlan(2, "조식 부페에서 식사");
         tourPlan.addPlan(2, "체크아웃");
+
+        System.out.println(tourPlan.toString());
     }
 }
