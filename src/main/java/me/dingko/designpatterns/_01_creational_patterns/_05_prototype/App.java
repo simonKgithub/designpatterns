@@ -16,15 +16,15 @@ public class App {
         GithubIssue clone = (GithubIssue) githubIssue.clone();
         System.out.println(clone.getUrl());
 
-        repository.setUser("dingko_");
+        repository.setName("dingko_");
+        System.out.println(githubIssue.getUrl());
+        System.out.println(clone.getUrl());
 
         //내용 확인
         System.out.println(clone != githubIssue); //true
-        System.out.println(clone.equals(githubIssue)); //true
+        System.out.println(clone.equals(githubIssue)); //false
         System.out.println(clone.getClass() == githubIssue.getClass()); //true
-        System.out.println(clone.getRepository() == githubIssue.getRepository()); //true
-
-        System.out.println(clone.getUrl());
+        System.out.println(clone.getRepository() == githubIssue.getRepository()); //false
     }
 }
 

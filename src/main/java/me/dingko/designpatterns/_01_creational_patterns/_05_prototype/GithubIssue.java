@@ -53,7 +53,7 @@ public class GithubIssue implements Cloneable{
         githubIssue.setId(this.id);
         githubIssue.setTitle(this.title);
 
-        return super.clone();
+        return githubIssue;
     }
 
     @Override
