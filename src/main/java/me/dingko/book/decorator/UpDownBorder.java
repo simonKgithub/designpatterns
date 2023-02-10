@@ -25,7 +25,7 @@ public class UpDownBorder extends Border{
         } else if (row == display.getRows() + 1) {
             return makeLine(ch, display.getColumns()); //하단
         } else {
-            return display.getRowText(row);
+            return display.getRowText(row-1);
         }
     }
 
