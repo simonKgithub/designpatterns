@@ -1,0 +1,4 @@
+dingko_@example.com=Dingko_
+youngman@example.com=Young Man
+dojeon@example.com=Do Jeon Goal
+gogoSing@example.com=Go Go Sing
