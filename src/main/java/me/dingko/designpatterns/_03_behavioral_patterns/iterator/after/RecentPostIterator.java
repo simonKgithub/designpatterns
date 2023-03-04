@@ -13,6 +13,7 @@ public class RecentPostIterator implements Iterator<Post> {
 
     public RecentPostIterator(List<Post> posts) {
         Collections.sort(posts, (p1, p2) -> p2.getCreatedDateTime().compareTo(p1.getCreatedDateTime()));
+//        List<Post> clone = List.copyOf(posts);
         this.internalIterator = posts.iterator();
     }
 
