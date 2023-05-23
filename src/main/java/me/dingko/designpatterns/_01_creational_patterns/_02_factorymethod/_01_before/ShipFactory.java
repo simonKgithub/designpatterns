@@ -4,10 +4,10 @@ public class ShipFactory {
 
     public static Ship orderShip(String name, String email) {
         // validate
-        if (name == null || name.isEmpty()) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("배 이름을 지어주세요.");
         }
-        if (email == null || email.isEmpty()) {
+        if (email == null || email.isBlank()) {
             throw new IllegalArgumentException("연락처를 남겨주세요.");
         }
 
@@ -18,14 +18,14 @@ public class ShipFactory {
 
         // Customizing for specific name
         if (name.equalsIgnoreCase("whiteship")) {
-            ship.setLogo("\uD83D\uDEE5️");
+            ship.setLogo("\uD83D\uDEE5");
         } else if (name.equalsIgnoreCase("blackship")) {
             ship.setLogo("⚓");
         }
 
         // coloring
         if (name.equalsIgnoreCase("whiteship")) {
-            ship.setColor("whiteship");
+            ship.setColor("white");
         } else if (name.equalsIgnoreCase("blackship")) {
             ship.setColor("black");
         }
