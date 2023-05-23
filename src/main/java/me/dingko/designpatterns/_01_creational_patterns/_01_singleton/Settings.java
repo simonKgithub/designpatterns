@@ -1,11 +1,35 @@
 package me.dingko.designpatterns._01_creational_patterns._01_singleton;
 
-public class Settings {
+import java.io.Serializable;
+
+public class Settings implements Serializable {
+
+    /**
+     * Q4. static inner class 사용하여 싱글톤 패턴 구현하기
+     */
+    private Settings(){}
+
+    private static class SettingHolder{
+        private static final Settings INSTANCE = new Settings();
+    }
+
+    public static Settings getInstance() {
+        return SettingHolder.INSTANCE;
+    }
+    protected Object readResolve(){
+        return getInstance();
+    }
+
+    /**
+     * 리플렉션을 이용한 싱글톤 파괴를 막는 방법: 이뉴머레이션 사용
+
+    INSTANCE;
+     */
 
     /**
      * 4) (권장) static inner 클래스 사용하기
      *  멀티스레드에 안전 + Lazy loading 가능
-     */
+
     private Settings(){}
 
     private static class SettingsHolder{
@@ -15,6 +39,13 @@ public class Settings {
     public static Settings getInstance() {
         return SettingsHolder.INSTANCE;
     }
+
+    //역직렬화 할 때 사용되는 메서드로, 이걸 override 하여 설정하게되면 생성자가 깨지는 것을 방지할 수 있다.
+    protected Object readResolve() {
+        //원래는 자동으로 new Settings 하게 되나, 이걸 getInstance()를 호출하게끔 코드를 바꿔준다.
+        return getInstance();
+    }
+     */
 
     /**
      * 3) double checked locking 사용하기
