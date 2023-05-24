@@ -3,20 +3,20 @@ package me.dingko.designpatterns._01_creational_patterns._03_abstract._02_after;
 public interface ShipFactory {
     default Ship orderShip(String name, String email) {
         validate(name, email);
-        prefareFor(name);
+        prepareFor(name);
         Ship ship = createShip();
         sendEmailTo(email, ship);
 
         return ship;
     }
 
-    me.dingko.designpatterns._01_creational_patterns._03_abstract._02_after.Ship createShip();
+    Ship createShip();
 
     private void sendEmailTo(String email, Ship ship){
         System.out.println(ship.getName() + " 생성 완료되었습니다.");
     };
 
-    private void prefareFor(String name){
+    private void prepareFor(String name){
         System.out.println(name + " 배 생성이 시작되었습니다.");
     };
 

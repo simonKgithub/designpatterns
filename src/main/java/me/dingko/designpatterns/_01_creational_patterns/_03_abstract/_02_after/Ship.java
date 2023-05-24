@@ -1,8 +1,5 @@
 package me.dingko.designpatterns._01_creational_patterns._03_abstract._02_after;
 
-import me.dingko.designpatterns._01_creational_patterns._03_abstract._01_before.WhiteAnchor;
-import me.dingko.designpatterns._01_creational_patterns._03_abstract._01_before.WhiteWheel;
-
 public class Ship {
     private String name;
     private String color;

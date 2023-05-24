@@ -1,14 +1,13 @@
 package me.dingko.designpatterns._01_creational_patterns._03_abstract._02_after;
 
-public class WhiteshipProPartsFactory implements ShipPartsFactory{
-
+public class AShipPartsFactory implements ShipPartsFactory{
     @Override
     public Anchor createAnchor() {
-        return new WhiteAnchorPro();
+        return new AAnchor();
     }
 
     @Override
     public Wheel createWheel() {
-        return new WhiteWheelPro();
+        return new AWheel();
     }
 }
