@@ -4,13 +4,15 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DefaultTourBuilder implements TourPlanBuilder {
+public class DefaultTourBuilder implements TourPlanBuilder{
+
     private String title;
     private int nights;
     private int days;
     private LocalDate startDate;
     private String whereToStay;
     private List<DetailPlan> plans;
+
 
     @Override
     public TourPlanBuilder title(String title) {
@@ -27,7 +29,7 @@ public class DefaultTourBuilder implements TourPlanBuilder {
 
     @Override
     public TourPlanBuilder startDate(LocalDate localDate) {
-        this.startDate = localDate;
+        this.startDate = startDate;
         return this;
     }
 
@@ -42,7 +44,6 @@ public class DefaultTourBuilder implements TourPlanBuilder {
         if (this.plans == null) {
             this.plans = new ArrayList<>();
         }
-
         this.plans.add(new DetailPlan(day, plan));
         return this;
     }
