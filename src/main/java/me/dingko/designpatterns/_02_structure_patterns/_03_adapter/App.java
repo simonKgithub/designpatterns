@@ -5,6 +5,10 @@ import me.dingko.designpatterns._02_structure_patterns._03_adapter.security.User
 
 import java.io.*;
 
+/**
+ * 어댑터 패턴: 기존 코드를 클라이언트가 사용하는 인터페이스의 구현체로 바꿔주는 패턴
+ *  - 클라이언트가 사용하는 인터페이스를 따르지 않는 기존 코드를 재사용할 수 있게 해준다.
+ */
 public class App {
     public static void main(String[] args) {
         AccountService accountService = new AccountService();

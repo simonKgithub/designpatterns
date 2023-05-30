@@ -4,6 +4,7 @@ import me.dingko.designpatterns._02_structure_patterns._03_adapter.security.User
 import me.dingko.designpatterns._02_structure_patterns._03_adapter.security.UserDetailsService;
 
 public class AccountUserDetailsService implements UserDetailsService {
+    //어댑티 클래스(우리가 원래 사용했던 클래스)를 의존
     AccountService accountService;
 
     public AccountUserDetailsService(AccountService accountService) {
