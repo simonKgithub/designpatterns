@@ -9,7 +9,7 @@ public class Item implements Component{
         this.price = price;
     }
 
-    @Override
+    @Override //컴파일 타임에 인터페이스가 제공하는 메서드가 맞는지 확인하는 역할이므로 구현할 시에는 잘 써줘야 한다.
     public int getPrice() {
         return this.price;
     }

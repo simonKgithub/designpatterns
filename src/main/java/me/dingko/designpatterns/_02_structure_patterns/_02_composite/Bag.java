@@ -3,7 +3,10 @@ package me.dingko.designpatterns._02_structure_patterns._02_composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bag implements Component{
+/**
+ * Bag 은 Composite 타입이다. Composite 타입은 Leaf(Item) 가 아니라, Component(Component) 를 참조(써야)해야 한다.
+ */
+public class Bag implements Component {
 
     private List<Component> components = new ArrayList<>();
 
